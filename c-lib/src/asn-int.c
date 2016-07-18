@@ -206,7 +206,10 @@ BDecAsnIntContent PARAMS ((b, tagId, len, result, bytesDecoded, env),
     byte = (unsigned long ) BufGetByte (b);
 
     if (byte & 0x80)   /* top bit of first byte is sign bit */
-        retVal = (-1 << 8) | byte;
+    {
+        printf("------------------- atigyi: warning here (-1 << 8) was\n");
+        retVal = (1 << 8) | byte;
+    }
     else
         retVal = byte;
 
