@@ -147,7 +147,7 @@ BDecLen PARAMS ((b, bytesDecoded, env),
 {
     AsnLen len;
     AsnLen byte;
-    int lenBytes;
+    unsigned long lenBytes;
 
     byte = (unsigned long) BufGetByte (b);
 
@@ -252,7 +252,7 @@ DDecLen PARAMS ((b, bytesDecoded, env),
 {
     AsnLen len;
     AsnLen byte;
-    int lenBytes;
+    unsigned long lenBytes;
 
     byte = (AsnLen) BufGetByte (b);
 

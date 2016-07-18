@@ -35,8 +35,8 @@ void Asn1DefaultErrorHandler PARAMS ((str, severity),
     int severity)
 {
   /*  fprintf(stderr,"%s",str); DAD - temp removing for now*/
-   severity=severity;   /* referenced  */
-   str=str;
+   (void)severity;   /* referenced  */
+   (void)str;
 }
 
 static Asn1ErrorHandler asn1CurrentErrorHandler = Asn1DefaultErrorHandler;

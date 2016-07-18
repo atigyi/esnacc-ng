@@ -343,7 +343,7 @@ PrintAsnOcts PARAMS ((f,v, indent),
 	  fprintf (f,".");
     }
     fprintf (f,"\" --");
-    indent=indent; /* referenced to avoid compiler warning. */
+    (void)indent; /* referenced to avoid compiler warning. */
 }
 
 

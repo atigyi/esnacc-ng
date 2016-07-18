@@ -224,7 +224,7 @@ BDecAsnIntContent PARAMS ((b, tagId, len, result, bytesDecoded, env),
     (*bytesDecoded) += len;
 
     *result = retVal;
-    tagId=tagId;  /* referenced to avoid compiler warning. */
+    (void)tagId;  /* referenced to avoid compiler warning. */
 
 }  /* BDecAsnIntContent */
 
@@ -240,7 +240,7 @@ PrintAsnInt PARAMS ((f, v, indent),
     unsigned int indent)
 {
     fprintf (f,"%d", *v);
-    indent=indent; /* referenced to avoid compiler warning. */
+    (void)indent; /* referenced to avoid compiler warning. */
 }
 
 
@@ -304,8 +304,8 @@ BEncUAsnIntContent PARAMS ((b, data),
     GenBuf *b _AND_
     UAsnInt *data)
 {
-    int             len;
-    int             i;
+    unsigned long   len;
+    unsigned long   i;
     unsigned long   mask;
     unsigned long   dataCpy;
 
@@ -410,7 +410,7 @@ BDecUAsnIntContent PARAMS ((b, tag, len, result, bytesDecoded, env),
     (*bytesDecoded) += len;
 
     *result = retVal;
-    tag=tag; /* referenced to avoid compiler warning. */
+    (void)tag; /* referenced to avoid compiler warning. */
 
 }  /* BDecUAsnIntContent */
 
@@ -422,7 +422,7 @@ PrintUAsnInt PARAMS ((f, v, indent),
     unsigned int indent)
 {
     fprintf (f, "%u", *v);
-    indent=indent;
+    (void)indent;
 }
 
 

@@ -74,7 +74,7 @@ BDecTag PARAMS ((b, bytesDecoded, env),
 {
     AsnTag tagId;
     AsnTag tmpTagId;
-    int i;
+    unsigned long i;
 
     tagId = ((AsnTag)BufGetByte (b)) << ((sizeof (AsnTag)-1)*8);
     (*bytesDecoded)++;
